@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Buscar Endereço</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Digite o CEP para buscar o endereço</ion-card-subtitle>
+    </ion-card-header>
+    
+    <ion-card-content>
+      
+      <ion-item>
+        <ion-label position="floating">CEP</ion-label>
+        <ion-input [(ngModel)]="cep" (keydown.enter)="buscarEndereco()"></ion-input>
+        <ion-button fill="clear" slot="end" *ngIf="cep" (click)="limparCep()" class="btn-limpar">
+          Limpar
+        </ion-button>
+      </ion-item>
+
+      
+      <div class="btn-buscar">
+        <ion-button expand="block" color="primary" (click)="buscarEndereco()">Buscar</ion-button>
+      </div>
+
+      
+      <ion-item>
+        <ion-label position="floating">Rua</ion-label>
+        <ion-input [(ngModel)]="endereco.logradouro" readonly></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Bairro</ion-label>
+        <ion-input [(ngModel)]="endereco.bairro" readonly></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Cidade</ion-label>
+        <ion-input [(ngModel)]="endereco.localidade" readonly></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Estado</ion-label>
+        <ion-input [(ngModel)]="endereco.uf" readonly></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-button class="btn-voltar" routerLink="/home" expand="block">Voltar para a Página Inicial</ion-button>
+</ion-content>

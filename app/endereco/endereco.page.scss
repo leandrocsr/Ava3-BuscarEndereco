@@ -1,0 +1,34 @@
+ion-card {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  ion-card-header {
+    text-align: center;
+  }
+  
+  .btn-buscar {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+  }
+  
+  ion-item {
+    --highlight-color-focused: #5a5a5a;
+  }
+  
+  .btn-limpar {
+    --color: #b0b0b0; /* Cinza esmaecido */
+    font-size: 0.9em;
+    padding: 0;
+    margin-right: -10px;
+  }
+  
+  .btn-limpar ion-icon {
+    font-size: 1.5em; /* Tamanho do ícone */
+  }
+
+  .btn-voltar {
+    margin-top: 50px;
+  }
